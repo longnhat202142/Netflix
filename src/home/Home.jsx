@@ -11,6 +11,10 @@ const Home = () => {
     
      <Featured/>
       <List/> 
+      <List/> 
+
+      <List/> 
+
     </div>
   )
 }
