@@ -5,26 +5,36 @@ import { useState } from "react"
 export default function ListItem({index}) {
 
   const [isHovered,setIsHovered] = useState(false);
- 
-  const tralier =  "C:\Users\admin\Downloads\Tree.mp4";
+
+
   // 
   return (
     <div className="listItem" 
     style={{left : isHovered && index * 225 - 50 + index * 2.5}}
-    onMouseEnter={() => setIsHovered(true)}
-    onMouseLeave={() =>setIsHovered(false)}
+    onMouseEnter={() => {
+    
+      setIsHovered(true);
+    }}
+    onMouseLeave={() =>
+      {
+     
+        setIsHovered(false);
+      }}
     >
-      <img src="https://cdn.sforum.vn/sforum/wp-content/uploads/2022/01/18-1.jpg" alt="" />
+      <img src="https://cdn.sforum.vn/sforum/wp-content/uploads/2022/01/18-1.jpg" alt="" /> 
      
       {isHovered && (
           <>
       
-     <video src={tralier} autoPlay={true} loop /> 
+     
+      <iframe src="https://www.youtube.com/embed/lj8TV9q59P4" title="[M/V] V - Christmas Tree :: 그 해 우리는(Our Beloved Summer) OST Part.5" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"></iframe>
+      <div className="itemInfo">
+      
       <div className="icons">
-        <PlayArrow/>
-        <Add/>
-        <ThumbUpAltOutlined/>
-        <ThumbDownRounded/>
+        <PlayArrow className="icon"/>
+        <Add className="icon"/>
+        <ThumbUpAltOutlined className="icon"/>
+        <ThumbDownRounded className="icon"/>
       </div>
 
       <div className="itemInfoTop">
@@ -38,9 +48,9 @@ export default function ListItem({index}) {
       Thật may mắn khi bộ phim tài liệu mà họ quay cách đây 10 năm ở trường cấp ba bỗng nổi đình đám và buộc cả hai phải gặp lại nhau bởi người bạn chung thời cấp ba của họ là cũng là một đạo diễn phim tài liệu.
       </div>
 
-      <div className="genre">Hành động</div>
+      <div className="genre">Tình cảm lãng mạn</div>
       
-     
+      </div>
       </>
       )}
      
